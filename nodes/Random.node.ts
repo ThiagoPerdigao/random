@@ -1,3 +1,5 @@
+// Aviso de warning se dá apenas pelo nome do arquivo não ser o mesmo que o da pasta
+
 import type{
 	IExecuteFunctions,
 } from 'n8n-workflow';
