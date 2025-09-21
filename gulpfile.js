@@ -12,5 +12,10 @@ function copyIcons() {
 	const credSource = path.resolve('credentials', '**', '*.{png,svg}');
 	const credDestination = path.resolve('dist', 'credentials');
 
-	return src(credSource).pipe(dest(credDestination));
-}
+	// Só copia se a pasta existir
+	try {
+		return src(credSource).pipe(dest(credDestination));
+	} catch (e) {
+		return Promise.resolve(); // não quebra o build
+	}
+	}
