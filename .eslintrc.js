@@ -1,3 +1,5 @@
+const path = require('path');
+
 /**
  * @type {import('@types/eslint').ESLint.ConfigData}
  */
@@ -13,10 +15,11 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 
 	parserOptions: {
-		project: ['./tsconfig.json'],
-		sourceType: 'module',
-		extraFileExtensions: ['.json'],
-	},
+        project: [path.resolve(__dirname, 'tsconfig.json')], // ← Caminho absoluto
+        sourceType: 'module',
+        extraFileExtensions: ['.json'],
+        tsconfigRootDir: __dirname, // ← Adicionar esta linha
+    },
 
 	ignorePatterns: ['.eslintrc.js', '**/*.js', '**/node_modules/**', '**/dist/**'],
 

@@ -1,0 +1,10 @@
+{
+  "node": "n8n-nodes-base.Random",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Transform"],
+  "resources": {
+    "credentialDocumentation": [{"url": ""}],
+    "primaryDocumentation": [{"url": "https://www.random.org"}]
+  }
+}
